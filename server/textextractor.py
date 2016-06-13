@@ -34,21 +34,27 @@ def collect_links(url):
             break
     return(links)
 
-links = collect_links('http://yaskluch.ru')
-art_cnt = 1
-for link in links:
-    text = urllib.request.urlopen(link).read().decode()
-    try:
-        tree = lxml.html.fromstring(text)
-    except:
-        print(link)
-        continue
-    texts = tree.xpath(     './body/div[@class="wrapper"]/div[@id="center_col"]/ul/li/span[@class="intro"]/text()')
-    if len(texts) > 0:
-        f = open(str(art_cnt), 'w', encoding = 'utf-8')
-        for t in texts:
-            f.write(t)
-        f.close()
-        art_cnt += 1
-    if art_cnt > 3:
-        break
+def extract_text (links):
+    art_cnt = 1
+    for link in links:
+        text = urllib.request.urlopen(link).read().decode()
+        try:
+            tree = lxml.html.fromstring(text)
+        except:
+            continue
+        texts = tree.xpath(     './body/div[@class="wrapper"]/div[@id="center_col"]/ul/li/span[@class="intro"]/text()')
+        if len(texts) > 0:
+            f = open(str(art_cnt), 'w', encoding = 'utf-8')
+            for t in texts:
+                f.write(t)
+            f.close()
+            art_cnt += 1
+        if art_cnt > 3:
+            break
+            
+def main():
+    links = collect_links('http://yaskluch.ru')
+    extract_text(links)
+    
+if __name__ == '__main__':
+    main()

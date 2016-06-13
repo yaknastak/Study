@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+  <head/>
+  <body>
+    <se><w><ana gr="S,NOM SG" lex="күк" morph="Ø" trans="небо"/><ana gr="ADJ,NOM SG" lex="күк" morph="Ø" trans="синий"/>Күк</w><w><ana gr="V,CAUS GER" lex="күкрә" morph="т еп" trans="греметь"/>күкрәтеп</w><w><ana gr="S,PL POSS_1SG DAT" lex="юл" morph="дар ым а" trans="дорога"/>юлдарыма</w></se>
+    <se><w><ana gr="V,GER" lex="саҡыр" morph="ып" trans="звать"/><ana gr="V,CAUS GER" lex="са" morph="ҡыр ып" trans="косить"/>Саҡырып</w><w><ana gr="S,DAT" lex="ат" morph="а" trans="лошадь, имя"/><ana gr="S,NOM SG" lex="ата" morph="Ø" trans="отец, самец"/><ana gr="V,IMP 2SG" lex="ата" morph="Ø" trans="называть"/><ana gr="V,PRES" lex="ат" morph="а" trans="стрелять, расцветать"/>ата</w><w><ana gr="S,POSS_3SG_PL" lex="таң" morph="ы" trans="заря"/>таңы</w>,\n</se>
+    <se><w><ana gr="S,POSS_1SG LOC" lex="тамыр" morph="ым да" trans="корень"/>Тамырымда</w><w><ana gr="S,NOM SG" lex="башҡорт" morph="Ø" trans="башкир"/>башҡорт</w>—<w><ana gr="ADJ,NOM SG" lex="атлы" morph="Ø" trans="имеющий лошадь"/>атлы</w></se>
+    <se><w><ana gr="V,NEG" lex="күс" morph="мә" trans="перемещаться"/><ana gr="S,POSS_1SG DAT" lex="күс" morph="м ә" trans="рой"/><ana gr="ADJ,NOM SG" lex="күсмә" morph="Ø" trans="перелетный, кочевой"/>Күсмә</w><w><ana gr="S,POSS_1SG GEN" lex="халҡ" morph="ым дың" trans="народ"/>халҡымдың</w><w><ana gr="S,POSS_3SG_PL" lex="ҡан" morph="ы" trans="кровь"/>ҡаны</w>.\n</se>
+    <se><w><ana gr="S,PL" lex="юл" morph="дар" trans="дорога"/>Юлдар</w><w><ana gr="V,PRES 1SG" lex="гиҙ" morph="ә м" trans="пересекать"/>гиҙәм</w>,<w><ana gr="S,PL" lex="йыл" morph="дар" trans="год"/>йылдар</w><w><ana gr="V,PRES 1SG" lex="гиҙ" morph="ә м" trans="пересекать"/>гиҙәм</w></se>
+    <se><w><ana gr="S,PL" lex="быуат" morph="тар" trans="век"/>Быуаттар</w><w><ana gr="S,POSS_3SG_PL ABL" lex="төпкөл" morph="ө нән" trans="глубина"/>төпкөлөнән</w>,\n</se>
+    <se><w><ana gr="S,POSS_1SG" lex="замандаш" morph="ым" trans="современник"/>Замандашым</w>,<w><ana gr="S,NOM SG" lex="сәләм" morph="Ø" trans="привет"/>сәләм</w><w><ana gr="SPRO,DAT" lex="һи" morph="ңә" trans="ты"/>һиңә</w></se>
+    <se><w><ana gr="S,GEN" lex="башҡорт" morph="тоң" trans="башкир"/>Башҡорттоң</w><w><ana gr="S,NOM SG" lex="төп" morph="Ø" trans="дно, основа"/>төп</w><w><ana gr="S,ABL" lex="иле" morph="нән" trans="с палец толщиной"/><ana gr="S,POSS_3SG_PL ABL" lex="ил" morph="е нән" trans="страна"/>иленән</w>.\n</se>
+    <se><w><ana gr="S,POSS_3SG_PL" lex="аманат" morph="ы" trans="аманат"/>Аманаты</w><w><ana gr="S,PL GEN" lex="баба" morph="лар ҙың" trans="баба"/>бабаларҙың</w>,\n</se>
+    <se><w><ana gr="V,IMP 2SG" lex="булығыҙ" morph="Ø" trans="будьте"/>Булығыҙ</w><w><ana gr="ADJ,NOM SG" lex="татыу" morph="Ø" trans="дружный, согласный"/>татыу</w>—<w><ana gr="NUM,DAT" lex="бер" morph="гә" trans="один"/><ana gr="ADJ,NOM SG" lex="бергә" morph="Ø" trans="вместе"/>бергә</w>.\n</se>
+    <se><w><ana gr="V,IMP 2SG" lex="күс" morph="Ø" trans="перемещаться"/><ana gr="S,NOM SG" lex="күс" morph="Ø" trans="рой"/>Күс</w><w><ana gr="S,POSS_3SG ASSIM" lex="ҡорт" morph="он дай" trans="червь, пчела, волк"/>ҡортондай</w><w><ana gr="V,1PL" lex="йыйылайы" morph="ҡ" trans="?"/>йыйылайыҡ</w></se>
+    <se><w><ana gr="S,POSS_1SG" lex="урал" morph="ым" trans="Урал"/><ana gr="V,PASS 1SG" lex="ура" morph="л ым" trans="мотать, заворачивать, закутывать"/>Уралым</w>—<w><ana gr="S,POSS_1PL DAT" lex="тирмә" morph="беҙ гә" trans="юрта"/>тирмәбеҙгә</w>,\n</se>
+    <se><w><ana gr="V,1PL" lex="йәшәйе" morph="к" trans="?"/>Йәшәйек</w><w><ana gr="V,INF" lex="бергәб" morph="ергә" trans="?"/><ana gr="S,DAT" lex="бергәбер" morph="гә" trans="?"/><ana gr="V,PRES" lex="бергәберг" morph="ә" trans="?"/>бергәбергә</w>.\n</se>
+  </body>
+</html>
