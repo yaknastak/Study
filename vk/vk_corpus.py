@@ -56,7 +56,7 @@ def get_posts(users, count, api):
         wall = api.wall.get(owner_id=id, filter="owner", count=count)
         for post in wall:
             try:
-                if 'copy_owner_id' not in post:
+                if 'copy_owner_id' not in post and len(post['text']) > 3:
                     fname = new_dir + '/' + str(cnt) + '.txt'
                     f = open(fname, 'w', encoding='utf-8')
                     f.write(post['text'] + '\n')
@@ -67,13 +67,13 @@ def get_posts(users, count, api):
         sleep(0.3)
 
 def main():
-    appid = ''
+    app_id = ''
     login = ''
     password = ''
-    session = vk.AuthSession(app_id=appid, user_login=login, user_password=password)
+    session = vk.AuthSession(app_id=app_id, user_login= login, user_password= password)
     api = vk.API(session)
     users = get_users(7402, 999, 'meta.csv', api)
-    #city_id = 7402 (Тара)
+    #city_id = 7402 Тара
     get_posts(users, 100, api)
     
 if __name__ == '__main__':
