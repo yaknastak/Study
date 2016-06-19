@@ -13,7 +13,7 @@ def main():
         print(Exception)
     cur.execute('use ' + dbname + ';')
     try:
-        cur.execute('create table metadata (id INT, sex INT(2), age INT, PRIMARY KEY(id));')
+        cur.execute('create table metadata (id INT, sex INT(2), age INT);')
     except: 
         print(Exception)
     with open('meta.csv', newline='', encoding = 'utf-8') as csvfile:
