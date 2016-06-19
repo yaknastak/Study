@@ -20,7 +20,10 @@ def main():
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
             db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "','" + str(row['age']) + "'"
-            cur.execute('insert into metadata (id, sex, age) value(' + db_row + ');')
+            try:
+                cur.execute('insert into metadata (id, sex, age) value(' + db_row + ');')
+            except:
+                print(db_row)
     try:
         cur.execute('create table walls (id INT, date INT, text VARCHAR(20000)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
     except: 
