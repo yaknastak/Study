@@ -2,9 +2,9 @@ import pymysql
 import os
 import csv
 
-def main(password):
+def main():
     dbname = 'guest1_YAKOVLEVA_VK'
-    conn = pymysql.connect(host='localhost', user='guest1', password=password, charset = 'utf-8')
+    conn = pymysql.connect(host='localhost', user='guest1', password='n76Je4=wx6H', charset = 'utf-8')
     cur = conn.cursor()
     sql = 'create database ' + dbname + ' DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;'
     try:
@@ -30,6 +30,5 @@ def main(password):
     conn.close()
     
 if __name__ == '__main__':
-    password = input('Enter password ')
-    main(password)
+    main()
         
