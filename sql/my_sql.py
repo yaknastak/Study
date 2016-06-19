@@ -4,7 +4,6 @@ import csv
 from datetime import datetime
 
 def main(password):
-    password = input('Enter password ')
     dbname = 'guest1_YAKOVLEVA_VK'
     conn = pymysql.connect(host=localhost, user='guest1', password=password, charset = 'utf-8')
     cur = conn.cursor()
@@ -32,5 +31,6 @@ def main(password):
     conn.close()
     
 if __name__ == '__main__':
-    main()
+    password = input('Enter password ')
+    main(password)
         
