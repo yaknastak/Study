@@ -19,11 +19,11 @@ def main():
     with open('meta.csv', newline='', encoding = 'utf-8') as csvfile:
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
-            db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "','" + str(row['age']) + "'"
+            db_row = str(row['uid']) + ',' + str(row['sex']) + ',' + str(row['age'])
             try:
                 cur.execute('insert into metadata (id, sex, age) value(' + db_row + ');')
             except:
-                print(db_row)
+                print(Exception)
     try:
         cur.execute('create table walls (id INT, date INT, text VARCHAR(20000)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
     except: 
