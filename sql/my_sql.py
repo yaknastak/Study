@@ -16,13 +16,13 @@ def main():
     with open('meta.csv', newline='') as csvfile:
         spamreader = csv.reader('meta.csv', delimiter='\t')
         for row in spamreader:
-            db_row = str(row['uid']) + ',' + str(row['sex']) + ',' + str(row['age'])
+            db_row = row['uid'] + ',' + row['sex'] + ',' + row['age']
             cur.execute('insert into meta (id, sex, age) value(db_row);')
     cur.execute('create table walls (id INT, date, text, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
     with open('tara.csv', newline='') as csvfile:
         spamreader = csv.reader('tara.csv', delimiter='\t')
         for row in spamreader:
-            db_row = str(row['id']) + ',' + str(row['date']) + ',' + row['post']
+            db_row = row['id'] + ',' + row['date'] + ',' + row['post']
             cur.execute('insert into walls (id, date, text) value(db_row);')
             
     conn.commit()
