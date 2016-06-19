@@ -29,7 +29,10 @@ def main():
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
             db_row1 = "'" + str(row['id']) + "','" + str(row['date']) + "','" + row['post'] + "'"
-            cur.execute('insert into walls (id, date, text) value(' + db_row1 + ');')
+            try:
+                cur.execute('insert into walls (id, date, text) value(' + db_row1 + ');')
+            except:
+                print(row['post'])
             
     conn.commit()
     cur.close()
