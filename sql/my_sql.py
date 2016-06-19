@@ -1,11 +1,10 @@
 import pymysql
 import os
 import csv
-from datetime import datetime
 
 def main(password):
     dbname = 'guest1_YAKOVLEVA_VK'
-    conn = pymysql.connect(host=localhost, user='guest1', password=password, charset = 'utf-8')
+    conn = pymysql.connect(host='localhost', user='guest1', password=password, charset = 'utf-8')
     cur = conn.cursor()
     sql = 'create database ' + dbname + ' DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;'
     try:
