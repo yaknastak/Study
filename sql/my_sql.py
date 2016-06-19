@@ -12,13 +12,19 @@ def main():
     except: 
         print(Exception)
     cur.execute('use ' + dbname + ';')
-    cur.execute('create table metadata (id INT, sex INT(2), age INT, PRIMARY KEY(id));')
+    try:
+        cur.execute('create table metadata (id INT, sex INT(2), age INT, PRIMARY KEY(id));')
+    except: 
+        print('table already exists')
     with open('meta.csv', newline='') as csvfile:
         spamreader = csv.DictReader(csvfile, delimiter='\t')
         for row in spamreader:
             db_row = str(row['uid']) + ',' + str(row['sex']) + ',' + str(row['age'])
             cur.execute('insert into meta (id, sex, age) value(' + db_row + ');')
-    cur.execute('create table walls (id INT, date INT, text VARCHAR, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
+    try:
+        cur.execute('create table walls (id INT, date INT, text VARCHAR, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
+    except:
+        print('table already exists')
     with open('tara.csv', newline='') as csvfile:
         spamreader = csv.DictReader(csvfile, delimiter='\t')
         for row in spamreader:
