@@ -12,16 +12,18 @@ def main():
     except: 
         print(Exception)
     cur.execute('use ' + dbname + ';')
-    cur.execute('create table metadata (id INT, sex INT(2), age INT, PRIMARY KEY(id));')
+    cur.execute('create table metadata (id, sex, age, PRIMARY KEY(id));')
     with open('meta.csv', newline='') as csvfile:
         spamreader = csv.reader('meta.csv', delimiter='\t')
         for row in spamreader:
-            cur.execute('insert into meta (id, sex, age) value(row['uid'], row['sex'], row['age']);')
-    cur.execute('create table walls (id INT, date, text, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
+            db_row = str(row['uid']) + ',' + str(row['sex']) + ',' + str(row['age'])
+            cur.execute('insert into meta (id, sex, age) value(db_row);')
+    cur.execute('create table walls (id, date, text, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
     with open('tara.csv', newline='') as csvfile:
         spamreader = csv.reader('tara.csv', delimiter='\t')
         for row in spamreader:
-            cur.execute('insert into walls (id, date, text) value(row['id'], row['date'], row['post']);')
+            db_row1 = str(row['id']) + ',' + str(row['date']) + ',' + row['post']
+            cur.execute('insert into walls (id, date, text) value(db_row1);')
             
     conn.commit()
     cur.close()
