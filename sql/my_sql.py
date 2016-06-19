@@ -4,7 +4,7 @@ import csv
 
 def main():
     dbname = 'guest1_YAKOVLEVA_VK'
-    conn = pymysql.connect(host='localhost', user='guest1', passwd ='n76Je4=wx6H', db = dbname, charset = 'utf-8')
+    conn = pymysql.connect(host='localhost', user='guest1', passwd ='n76Je4=wx6H', db = dbname, charset = "utf-8")
     cur = conn.cursor()
     sql = 'create database ' + dbname + ' DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;'
     try:
