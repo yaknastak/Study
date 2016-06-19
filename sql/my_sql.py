@@ -16,8 +16,7 @@ def main():
     with open('meta.csv', newline='') as csvfile:
         spamreader = csv.reader('meta.csv', delimiter='\t')
         for row in spamreader:
-            db_row = row['uid'] + ',' + row['sex'] + ',' + row['age']
-            cur.execute('insert into meta (id, sex, age) value(db_row);')
+            cur.execute('insert into meta (id, sex, age) value(row['uid'], row['sex'], row['age']);')
     cur.execute('create table walls (id INT, date, text, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
     with open('tara.csv', newline='') as csvfile:
         spamreader = csv.reader('tara.csv', delimiter='\t')
