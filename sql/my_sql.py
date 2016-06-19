@@ -22,7 +22,7 @@ def main():
             db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "','" + str(row['age']) + "'"
             cur.execute('insert into metadata (id, sex, age) value(' + db_row + ');')
     try:
-        cur.execute('create table walls (id INT, date INT, text VARCHAR, PRIMARY KEY(id)), DEFAULT CHARSET=utf8')
+        cur.execute('create table walls (id INT, date INT, text VARCHAR, PRIMARY KEY(id)), DEFAULT CHARSET=utf8;')
     except:
         print('table already exists')
     with open('tara.csv', newline='', encoding = 'utf-8') as csvfile:
