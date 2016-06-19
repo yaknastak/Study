@@ -21,8 +21,7 @@ def main():
     with open('tara.csv', newline='') as csvfile:
         spamreader = csv.reader('tara.csv', delimiter='\t')
         for row in spamreader:
-            db_row = row['id'] + ',' + row['date'] + ',' + row['post']
-            cur.execute('insert into walls (id, date, text) value(db_row);')
+            cur.execute('insert into walls (id, date, text) value(row['id'], row['date'], row['post']);')
             
     conn.commit()
     cur.close()
