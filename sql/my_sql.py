@@ -19,7 +19,7 @@ def main():
     with open('meta.csv', newline='', encoding = 'utf-8') as csvfile:
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
-            db_row = str(row['uid']) + ',' + str(row['sex']) + ',' + str(row['age'])
+            db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "','" + str(row['age']) + "'"
             cur.execute('insert into meta (id, sex, age) value(' + db_row + ');')
     try:
         cur.execute('create table walls (id INT, date INT, text VARCHAR, PRIMARY KEY(id)), DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
@@ -28,7 +28,7 @@ def main():
     with open('tara.csv', newline='', encoding = 'utf-8') as csvfile:
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
-            db_row1 = str(row['id']) + ',' + str(row['date']) + ',' + row['post']
+            db_row1 = "'" + str(row['id']) + "','" + str(row['date']) + "','" + row['post'] + "'"
             cur.execute('insert into walls (id, date, text) value(' + db_row1 + ');')
             
     conn.commit()
