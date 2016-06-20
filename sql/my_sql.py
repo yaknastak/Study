@@ -2,6 +2,16 @@ import pymysql
 import os
 import csv
 
+def create_db():
+    dbname = 'guest1_YAKOVLEVA_VK'
+    conn = pymysql.connect(host='localhost', user='guest1', passwd ='n76Je4=wx6H',charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+    cur = conn.cursor()
+    try:
+        sql = 'CREATE DATABASE ' + dbname + ';'
+        cur.execut(sql)
+    except:
+        print('DB already exists')
+    
 def main():
     dbname = 'guest1_YAKOVLEVA_VK'
     conn = pymysql.connect(host='localhost', user='guest1',db = dbname, passwd ='n76Je4=wx6H', charset = 'utf8')
