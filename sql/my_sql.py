@@ -12,7 +12,7 @@ def main():
     with open('meta.csv', encoding = 'utf-8') as csvfile:
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
-            db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "'"
+            db_row = str(row['uid']) + ",'" + str(row['sex']) + "'"
             cur.execute('INSERT INTO `metadata` (`id`, `sex`)VALUES (' + db_row + ');')
     try: cur.execute('CREATE TABLE `walls` (`id` INT, `date` INT, `text` VARCHAR(10000)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
     except: print('table already exists')
