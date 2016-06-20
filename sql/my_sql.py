@@ -13,6 +13,7 @@ def create_db():
         print('DB already exists')
     
 def main():
+    create_db()
     dbname = 'guest1_YAKOVLEVA_VK'
     conn = pymysql.connect(host='localhost', user='guest1',db = dbname, passwd ='n76Je4=wx6H', charset = 'utf8')
     cur = conn.cursor()
