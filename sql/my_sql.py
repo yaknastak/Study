@@ -18,24 +18,8 @@ def main():
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
             db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "'"
-            try:
-                cur.execute('INSERT INTO `metadata` (`id`, `sex`)VALUES (' + db_row + ');')
-            except ProgrammingError as ex:
-                if cursor:
-                    print ("\n".join(cursor.messages))
-                else:
-                    print ("\n".join(self.db.messages))
-    try: cur.execute('CREATE TABLE `walls` (`id` INT, `date` INT, `text` VARCHAR(10000)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;')
-    except: print('table already exists')
-    with open('tara.csv', newline='', encoding = 'utf-8') as csvfile:
-        spamreader = csv.DictReader(csvfile, delimiter=',')
-        for row in spamreader:
-            db_row1 = "'" + str(row['id']) + "','" + str(row['date']) + "','" + row['post'] + "'"
-            try:
-                cur.execute('INSERT INTO `walls` (`id`, `date`, `text`)VALUES (' + db_row1 + ');')
-            except:
-                print(row['post'])
-            
+            cur.execute('INSERT INTO `metadata` (`id`, `sex`)VALUES (' + db_row + ');')
+
     conn.commit()
     cur.close()
     conn.close()
