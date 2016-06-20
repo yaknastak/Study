@@ -8,7 +8,7 @@ def create_db():
     cur = conn.cursor()
     try:
         sql = 'CREATE DATABASE ' + dbname + ';'
-        cur.execut(sql)
+        cur.execute(sql)
     except:
         print('DB already exists')
     
