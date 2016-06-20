@@ -17,6 +17,8 @@ def main():
     dbname = 'guest1_YAKOVLEVA_VK'
     conn = pymysql.connect(host='localhost', user='guest1',db = dbname, passwd ='n76Je4=wx6H', charset = 'utf8')
     cur = conn.cursor()
+    cur.execute('DROP DATABASE ' + dbname + ';')
+    """
     cur.execute('use ' + dbname + ';')
     try: cur.execute('CREATE TABLE `metadata` (`id` INT, `sex` INT(2), PRIMARY KEY(id));')
     except: print('table already exists')
@@ -35,6 +37,7 @@ def main():
                 cur.execute('INSERT INTO `walls` (`id`, `date`, `text`)VALUES (' + db_row1 + ');')
             except:
                 print(row['post'])
+    """
     conn.commit()
     cur.close()
     conn.close()
