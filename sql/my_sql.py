@@ -13,8 +13,8 @@ def main():
         spamreader = csv.DictReader(csvfile, delimiter=',')
         for row in spamreader:
             db_row = "'" + str(row['uid']) + "','" + str(row['sex']) + "'"
-            cur.execute('INSERT INTO `metadata` (`id`, `sex`)VALUES (' + db_row + ');')
-
+           # cur.execute('INSERT INTO `metadata` (`id`, `sex`)VALUES (' + db_row + ');')
+             cur.execute('INSERT INTO `metadata` (`id`, `sex`)VALUES (' + "'1345'" + ',' + "'2'" + ');')
     conn.commit()
     cur.close()
     conn.close()
